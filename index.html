@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wallet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="lg:px-20 md:10">
+  <header>
+    <h1 class="text-cyan-600 text-4xl font-bold text-center pt-3">Wallet💰</h1>
+  </header>
+  <main class="mb-10">
+    <section class="grid lg:grid-cols-2 md:grid-cols-1 pt-10 gap-x-20">
+      <div class="left-side">
+        <img src="/bank.jpg" alt="">
+        <div>
+          <h2 class="text-4x1 bg-blue-400 text-center py-5 font-bold text-white">Wallet Balance is💰 <span
+              id="saveBalanceDashboard">0</span> <span>Tk</span></h2>
+        </div>
+      </div>
+      <div>
+        <!-- income -->
+        <h2 class="text-stone-800 text-3xl text-center pb-7">Income</h2>
+        <div class="text-center pt-5">
+          <span class="font-bold text-inherit pr-7 ">Income : </span><input class="bd-slate-300 font-bold rounded pb-5"
+            style="border-style:none; width:30%; " id="inputIncomeBtn" type="text" name="" id="">
+        </div>
+        <!-- Expenses -->
+        <h2 class="text-stone-800 text-3xl text-center pb-7">Expenses</h2>
+
+        <div class="text-center pt-5">
+          <span class="font-bold text-inherit pr-7">Food : </span><input class="bd-slate-300 font-bold rounded"
+            style="border-style:none; width:30%; " id="inputFoodBtn" type="text" name="" id="">
+        </div>
+
+        <div class="text-center pt-5">
+          <span class="font-bold text-inherit pr-7">Rent : </span><input class="bd-slate-300 font-bold rounded"
+            style="border-style:none; width:30%; " id="inputRentBtn" type="text" name="" id="">
+        </div>
+
+        <div class="text-center pt-5">
+          <span class="font-bold text-inherit pr-7">Clothes : </span><input class="bd-slate-300 font-bold rounded"
+            style="border-style:none; width:30%; " id="inputClothBtn" type="text" name="" id="">
+        </div>
+        <!-- calculate -->
+        <div class="text-center pt-10">
+          <button class="font-bold text-stone-800 text-3xl bg-cyan-600 hover:bg-cyan-600 p-5 rounded-lg "
+            type="submit">Calculate</button>
+        </div>
+        <div>
+          <span>Save : </span>
+          <input class="bg-cyan-500 hover:bg-cyan-600 px-10 text-xl font-bold py-2 text-white rounded mt-6"
+            style="border-style: ; width:15%;" type="text">
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
+</body>
+
+</html>
