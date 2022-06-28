@@ -25,74 +25,75 @@
       <div class="bg-gray-300">
         <!-- income -->
         <h2 class="text-stone-800 text-3xl text-center pb-7">Income</h2>
-        <div class="text-center py-5">
-          <span class="font-bold text-inherit pr-7 ">Income : </span><input class="bd-slate-300 font-bold rounded"
-            style="border-style:none; width:30%; " id="inputIncomeBtn" type="text" name="">
+        <div class="income">
+          <h2 class="text-xl text-center pt-6 font-bold">Income</h2>
+          <div class="text-center pt-5">
+            <span class="font-bold text-inherit pr-3 ">Income: </span><input style="border-style:none; width: 30%;"
+              id="inputIncomeBtn" class="bg-slate-300  font-bold rounded" type="text">
+            <span style="display: none;" id="incomeMinusNumber" class="text-red-600 pl-20 font-bold">*Please Input
+              Positive Number</span>
+          </div>
         </div>
         <!-- Expenses -->
-        <h2 class="text-stone-800 text-3xl text-center pb-7">Expenses</h2>
+        <div class="Expenses">
+          <h2 class="text-xl text-center pt-6 font-bold">Expenses</h2>
 
-        <div class="text-center pt-5">
-          <span class="font-bold text-inherit pr-7">Food : </span><input class="bd-slate-300 font-bold rounded"
-            style="border-style:none; width:30%; " id="inputFoodBtn" type="text" name="">
-          <span style="display: none;" id="foodMinusNumber" class="text-red-600 pl-20 font-bold">Please Input Positive
-            Number</span>
-        </div>
+          <div class="text-center pt-5">
+            <span class="font-bold text-inherit pr-7">Food: </span><input class="bg-slate-300  font-bold rounded"
+              style="border-style:none; width: 30%;" id="inputFoodBtn" type="text">
+            <span style="display: none;" id="foodMinusNumber" class="text-red-600 pl-20 font-bold">Please Input Positive
+              Number</span>
+          </div>
 
-        <div class="text-center pt-5">
-          <span class="font-bold text-inherit pr-7">Rent : </span><input class="bd-slate-300 font-bold rounded"
-            style="border-style:none; width:30%; " id="inputRentBtn" type="text" name="">
-          <span style="display: none;" id="rentMinusNumber" class="text-red-600 pl-20 font-bold">Please Input Positive
-            Number</span>
-        </div>
+          <div class="text-center pt-5">
+            <span class="font-bold text-inherit pr-8">Rent:</span>
+            <input class="bg-slate-300  font-bold rounded" style="border-style:none; width: 30%;" id="inputRentBTn"
+              type="text">
+            <span style="display: none;" id="rentMinusNumber" class="text-red-600 pl-20 font-bold">Please Input Positive
+              Number</span>
+          </div>
 
-        <div class="text-center pt-5">
-          <span class="font-bold text-inherit pr-7">Clothes:</span><input class="bd-slate-300 font-bold rounded"
-            style="border-style:none; width:30%; " id="inputClothBtn" type="text" name="">
-          <span style="display: none;" id="clothesMinusNumber" class="text-red-600 pl-20 font-bold">Please Input
-            Positive Number</span>
+          <div class="text-center pt-5">
+            <span class="font-bold text-inherit pr-3">Clothes:</span><input class="bg-slate-300  font-bold rounded"
+              style="border-style:none; width: 30%;" id="inputClothesBtn" type="text">
+            <span style="display: none;" id="clothesMinusNumber" class="text-red-600 pl-20 font-bold">Please Input
+              Positive Number</span>
+          </div>
         </div>
         <!-- calculate -->
-        <div class="text-center pt-10">
-          <button class="font-bold text-stone-700 text-3xl bg-cyan-600 hover:bg-cyan-600 p-5 rounded-lg "
-            type="submit">Calculate</button>
-          <div class="totalExpenses">
-            <h2 class="text-2xl text-center pt-5 font-bold text-inherit">Total Expenses: <span
-                id="totalExpenses">0</span> <span>Tk</span></h2>
-          </div>
-          <div class="Balance">
-            <h2 class="text-2xl text-center pt-5 font-bold text-inherit">Balance: <span id="balance">0</span>
-              <span>Tk</span>
-            </h2>
-            <h2 id="incomeBalanceLow" style="display: none;"
-              class="text-2xl text-center pt-5 font-bold text-inherit text-red-600">You haven't enough Income Balance
-            </h2>
-          </div>
+        <div class="calculateBtn justify-center align-center text-center">
+          <button id="calculate"
+            class="bg-cyan-500 hover:bg-cyan-600 px-10 text-xl font-bold py-2 text-white rounded mt-6"
+            type="submit">Claculate</button>
+        </div>
+        <div class="totalExpenses">
+          <h2 class="text-2xl text-center pt-5 font-bold text-inherit">Total Expenses: <span id="totalExpenses">0</span>
+            <span>Tk</span></h2>
+        </div>
+        <div class="Balance">
+          <h2 class="text-2xl text-center pt-5 font-bold text-inherit">Balance: <span id="balance">0</span>
+            <span>Tk</span></h2>
+          <h2 id="incomeBalanceLow" style="display: none;"
+            class="text-2xl text-center pt-5 font-bold text-inherit text-red-600">You haven't enough Income Balance</h2>
         </div>
         <!-- save section  -->
         <section>
-          <div class="text-center pt-5">
-            <span class="font-bold text-inherit">Save:</span>
-            <input class="bg-slate-300  font-bold rounded" style="border-style:none; width: 15%;" id="savebtn"
-              type="text"> <span class="font-bold">%</span> <button id="save"
-              class="bg-cyan-500 hover:bg-cyan-600 px-10 text-xl font-bold py-2 text-white rounded"
-              type="submit">Save</button>
-            <span style="display: none;" id="saveMinusNumber" class="text-red-600 pl-6 font-bold">You can use 0% to
-              100%</span>
-            <span style="display: none;" id="saveNoBalance" class="text-red-600 pl-6 font-bold">You haven't enough money
-              for Saving</span>
-            <span style="display: none;" id="blankBlalance" class="text-red-600 pl-6 font-bold">At first press
-              Calculate</span>
-            <div class="SavingAmount">
-              <h2 class="text-2xl text-center pt-5 font-bold text-inherit">Saving Amount: <span
-                  id="saveBalance">0</span> <span>Tk</span></h2>
-            </div>
-            <div class="SavingAmount">
-              <h2 class="text-2xl text-center pt-5 font-bold text-inherit pb-10">Remaining Balance: <span
-                  id="remainingBalance">0</span> <span>Tk</span></h2>
-            </div>
+          <div class="saveSection">
+              <div class="text-center pt-5">
+                  <span class="font-bold text-inherit">Save:</span>
+                  <input class="bg-slate-300  font-bold rounded"style="border-style:none; width: 15%;" id="savebtn" type="text" > <span class="font-bold">%</span>  <button id="save" class="bg-cyan-500 hover:bg-cyan-600 px-10 text-xl font-bold py-2 text-white rounded" type="submit">Save</button>
+                  <span style="display: none;" id="saveMinusNumber" class="text-red-600 pl-6 font-bold">You can use 0% to 100%</span>
+                  <span style="display: none;" id="saveNoBalance" class="text-red-600 pl-6 font-bold">You haven't enough money for Saving</span>
+                  <span style="display: none;" id="blankBlalance" class="text-red-600 pl-6 font-bold">At first press Calculate</span>
+                  <div class="SavingAmount">
+                      <h2 class="text-2xl text-center pt-5 font-bold text-inherit">Saving Amount: <span id="saveBalance">0</span> <span>Tk</span></h2>
+                  </div>
+                  <div class="SavingAmount">
+                      <h2 class="text-2xl text-center pt-5 font-bold text-inherit pb-10">Remaining Balance: <span id="remainingBalance">0</span> <span>Tk</span></h2>
+                  </div>
+              </div>
           </div>
-        </section>
+      </section>
 
 
       </div>
@@ -100,10 +101,11 @@
   </main>
 
 
+
+
   <script src="js/app.js"></script>
 
-
-
 </body>
+
 
 </html>

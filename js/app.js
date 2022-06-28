@@ -12,7 +12,6 @@ function totalCost() {
 }
 
 
-
 function forMinus(inputfield, items) {
     const inputFoodBtn = document.getElementById(inputfield);
     const inputFoodBtnText = inputFoodBtn.value;
@@ -32,7 +31,7 @@ function incomeBalance(inputValue) {
     const inputIncomeBtnValue = parseFloat(inputIncomeBtn.value)
     return inputIncomeBtnValue
 }
-
+9
 document.getElementById("calculate").addEventListener("click", function () {
     // minus function call
     forMinus("inputIncomeBtn", "incomeMinusNumber")
@@ -40,7 +39,7 @@ document.getElementById("calculate").addEventListener("click", function () {
     forMinus("inputRentBTn", "rentMinusNumber")
     forMinus("inputClothesBtn", "clothesMinusNumber")
 
-    //--------------- error handle for string----------
+    // --------------- error handle for string----------
     if (isNaN(totalCost())) {
         alert('Please Fill all Inputs with Number')
     }
